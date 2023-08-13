@@ -13,11 +13,11 @@ OUTPUT_DIR = os.path.join(os.path.dirname(os.path.dirname(THIS_PATH)), "outputs"
 IMAGE_DIR = os.path.join(os.path.dirname(os.path.dirname(THIS_PATH)), "images")
 SAVE_DIR = os.path.join(os.path.dirname(os.path.dirname(THIS_PATH)), "saves")
 
-if os.path.exists(OUTPUT_DIR):
+if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR, mode = 0o777, exist_ok = True)
-if os.path.exists(IMAGE_DIR):
+if not os.path.exists(IMAGE_DIR):
     os.makedirs(IMAGE_DIR, mode = 0o777, exist_ok = True)
-if os.path.exists(SAVE_DIR):
+if not os.path.exists(SAVE_DIR):
     os.makedirs(SAVE_DIR, mode = 0o777, exist_ok = True)
 
 suggestions = Suggestions(language = "vi", region = "VN")
