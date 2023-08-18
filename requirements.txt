@@ -4,8 +4,8 @@ starlette==0.26.1
 fastapi==0.95.1
 uvicorn==0.21.1
 pydantic==1.9.0
-# pytube
-git+https://github.com/oncename/pytube
+pytube==15.0.0
+# git+https://github.com/oncename/pytube
 youtube-search-python
 streamlit
 streamlit-keyup

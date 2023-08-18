@@ -98,9 +98,9 @@ def init():
                 st.toast("Done!", icon = "🎉")
                 with col3:
                     if show_vid:
-                        st.video(file)
+                        st.video(file, format = "video/mp4")
                     else:
-                        st.audio(file)
+                        st.audio(file, format = "audio/mp3")
                     if st.button("Save", "save"):
                         f_dst = name_to_suggest + "." + file.rsplit("/", 1)[-1].rsplit(".", 1)[-1]
                         dst = os.path.join(save_dir, f_dst)
@@ -124,9 +124,9 @@ def init():
                 fp = os.path.join(save_dir, n)
                 if sf_button(n, key = n):
                     if fp.endswith(".mp3"):
-                        st.audio(fp)
+                        st.audio(fp, format = "audio/mp3")
                     else:
-                        st.video(fp)
+                        st.video(fp, format = "video/mp4")
             
 def main():
     init()
